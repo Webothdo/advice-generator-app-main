@@ -90,6 +90,10 @@ h1 {
     border-radius: 5px;
 }
 
+.share-container a:hover {
+    cursor: pointer;
+}
+
 .icon {
     display: inline-block;
     margin-left: 5px;

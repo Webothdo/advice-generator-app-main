@@ -8,6 +8,7 @@ const adviceId = document.querySelector('h1');
 const twitter = document.querySelector('.twitter');
 const whatsapp = document.querySelector('.whatsapp');
 const saveImage = document.querySelector('.save');
+const divider = document.querySelector('#divider')
 const url = 'https://api.adviceslip.com/advice';
 
 let text;
@@ -44,11 +45,21 @@ whatsapp.addEventListener('click', () => {
 
 
 saveImage.addEventListener('click', () => {
+    divider.style.display = 'none'
+    saveImageFunc()
+
+    setTimeout(() => {
+        divider.style.display = 'block'
+    }, 100);
+})
+
+const saveImageFunc = () => {
     toJpeg(document.querySelector('#container'), { quality: 0.95 })
         .then(function (dataUrl) {
             const link = document.createElement('a');
             link.download = 'my-image-name.jpeg';
             link.href = dataUrl;
             link.click();
+            link.remove();
         });
-})
+}                            

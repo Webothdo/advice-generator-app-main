@@ -88,6 +88,10 @@ h1 {
   display: flex;
 }
 
+.share-container a:hover {
+  cursor: pointer;
+}
+
 .icon {
   color: #52ffa8;
   margin-left: 5px;

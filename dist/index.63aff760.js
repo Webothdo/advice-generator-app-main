@@ -540,6 +540,7 @@ const adviceId = document.querySelector("h1");
 const twitter = document.querySelector(".twitter");
 const whatsapp = document.querySelector(".whatsapp");
 const saveImage = document.querySelector(".save");
+const divider = document.querySelector("#divider");
 const url = "https://api.adviceslip.com/advice";
 let text;
 async function getAdvice() {
@@ -569,6 +570,13 @@ whatsapp.addEventListener("click", ()=>{
     whatsapp.setAttribute("href", `whatsapp://send?text=${text}`);
 });
 saveImage.addEventListener("click", ()=>{
+    divider.style.display = "none";
+    saveImageFunc();
+    setTimeout(()=>{
+        divider.style.display = "block";
+    }, 100);
+});
+const saveImageFunc = ()=>{
     (0, _htmlToImage.toJpeg)(document.querySelector("#container"), {
         quality: 0.95
     }).then(function(dataUrl) {
@@ -576,8 +584,9 @@ saveImage.addEventListener("click", ()=>{
         link.download = "my-image-name.jpeg";
         link.href = dataUrl;
         link.click();
+        link.remove();
     });
-});
+};
 
 },{"html-to-image":"82kuj"}],"82kuj":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
