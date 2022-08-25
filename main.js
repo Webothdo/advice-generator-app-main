@@ -1,4 +1,7 @@
 'use strict';
+import * as htmlToImage from 'html-to-image';
+import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
+import { saveAs } from "file-saver";
 
 const advice = document.querySelector('#advice');
 const adviceButton = document.querySelector('#advice-button');
