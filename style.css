@@ -26,15 +26,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     background-color: hsl(217, 19%, 24%);
     max-width: 33.5rem;
     width: 90%;
     padding: 3.2rem 1.5rem;
     border-radius: 10px;
-    box-sizing: border-box;
     text-align: center;
-    margin: 0 auto;
 }
 
 h1 {
