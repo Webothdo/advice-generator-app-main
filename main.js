@@ -1,13 +1,14 @@
 'use strict';
-import * as htmlToImage from 'html-to-image';
-import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
-import { saveAs } from "file-saver";
+
+import { toJpeg } from "html-to-image";
 
 const advice = document.querySelector('#advice');
 const adviceButton = document.querySelector('#advice-button');
 const adviceId = document.querySelector('h1');
 const twitter = document.querySelector('.twitter');
 const whatsapp = document.querySelector('.whatsapp');
+const saveImage = document.querySelector('.save');
+const divider = document.querySelector('#divider')
 const url = 'https://api.adviceslip.com/advice';
 
 let text;
@@ -41,3 +42,24 @@ whatsapp.addEventListener('click', () => {
     let text = advice.innerHTML;
     whatsapp.setAttribute('href', `whatsapp://send?text=${text}`)
 })
+
+
+saveImage.addEventListener('click', () => {
+    divider.style.display = 'none'
+    saveImageFunc()
+
+    setTimeout(() => {
+        divider.style.display = 'block'
+    }, 100);
+})
+
+const saveImageFunc = () => {
+    toJpeg(document.querySelector('#container'), { quality: 0.95 })
+        .then(function (dataUrl) {
+            const link = document.createElement('a');
+            link.download = 'my-image-name.jpeg';
+            link.href = dataUrl;
+            link.click();
+            link.remove();
+        });
+}                            
