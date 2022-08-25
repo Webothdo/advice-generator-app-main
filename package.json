@@ -4,6 +4,7 @@
     "html-to-image": "^1.10.4"
   },
   "name": "advice-generator-app-main",
+  "source": "index.html",
   "description": "![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)",
   "version": "1.0.0",
   "devDependencies": {
