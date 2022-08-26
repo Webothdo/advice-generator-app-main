@@ -43,9 +43,12 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [adveed.netlify.app](https://adveed.netlify.app)
 
 ## My process
+I first identified what I was tasked with building, then I broke it down into components. After I figured how I wanted it to be stacked
+I built out the very minimum first - no css - nothing, just to hook up the API and played with making it work and changing the text
+dynamically
 
 ### Built with
 
