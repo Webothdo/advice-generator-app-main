@@ -36,7 +36,7 @@ Will add screenshot soon
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [adveed](https://adveed.netlify.app)
 - Live Site URL: [adveed.netlify.app](https://adveed.netlify.app)
 
 ## My process
